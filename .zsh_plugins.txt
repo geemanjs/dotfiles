@@ -1,0 +1,29 @@
+robbyrussell/oh-my-zsh
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/docker-compose
+robbyrussell/oh-my-zsh path:plugins/kubectl
+robbyrussell/oh-my-zsh path:plugins/vi-mode
+robbyrussell/oh-my-zsh path:plugins/man
+robbyrussell/oh-my-zsh path:plugins/gradle
+robbyrussell/oh-my-zsh path:plugins/mvn
+robbyrussell/oh-my-zsh path:plugins/npm
+robbyrussell/oh-my-zsh path:plugins/python
+robbyrussell/oh-my-zsh path:plugins/virtualenv
+robbyrussell/oh-my-zsh path:plugins/vim-interaction
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+
+rupa/z
+caarlos0/jvm
+
+mollifier/cd-gitroot
+Seinh/git-prune
+paulirish/git-open
+peterhurford/git-it-on.zsh
+mafredri/zsh-async
+sindresorhus/pure
+
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zdharma/fast-syntax-highlighting
+zsh-users/zsh-history-substring-search

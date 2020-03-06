@@ -170,12 +170,17 @@ function nullify() {
   "$@" >/dev/null 2>&1
 }
 
-
-# visual studio code. a la `subl`
-function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $*; }
-
 # `shellswitch [bash |zsh]`
 #   Must be in /etc/shells
 shellswitch () {
 	chsh -s $(brew --prefix)/bin/$1
+}
+
+
+# Base64 encode/decode
+function b64d() { echo $1 | base64 -D | pbcopy; }
+function b64e() { echo -n $1 | base64 | pbcopy; }
+
+function getToken() {
+  http --form POST https://api.eevee.$1-mettle.co.uk/auth/oauth/token grant_type=password username=admin@mettle.co.uk password=password client_id=ops | jq -r ".access_token" | tr -d '\n'
 }

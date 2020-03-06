@@ -24,3 +24,15 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
+
+# fish shell
+fishd.*
+fish/config.fish.backup
+.config/fish/fish_history
+fish/fish_history
+fish/fish_variables
+
+# random
+shylocation
+logs/
+pacts/

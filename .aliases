@@ -6,11 +6,33 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+alias cdu='cd-gitroot'
 
 # mv, rm, cp
 alias mv='mv -v'
 alias rm='rm -i -v'
 alias cp='cp -v'
+
+alias d="cd ~/drive"
+alias dj="cd ~/drive_justec"
+alias db="cd  ~/drive_booket"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias co="cd ~/code/src"
+alias github="cd ~/code/src/github.com"
+alias mettle="cd ~/code/src/github.com/eeveebank"
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
 alias chmox='chmod -x'
 
@@ -21,6 +43,12 @@ alias brwe=brew  #typos
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 
 alias ag='ag -f --hidden'
+
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias map="xargs -n1"
+alias currentpath='echo -e ${PATH//:/\\n}'
+
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
 ###
 # time to upgrade `ls`

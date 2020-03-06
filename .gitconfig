@@ -1,3 +1,8 @@
+[user]
+	name = James Gee
+	email = geemanjs@gmail.com
+
+
 [alias]
 	c = commit -am
 	fpush = push --force
@@ -13,6 +18,12 @@
 	cherry = cherry-pick
 	cp = cherry-pick
 
+	# show commit log of unique commits of this branch (not on master)
+	diffcommitsfrommaster = log --no-merges master..
+	# show unified diff of unique commits of this branch
+	difffrommaster = diff master...
+	# ^^^^ Holy crap two dots vs three dots, so important. https://stackoverflow.com/a/48681527
+
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
@@ -22,6 +33,8 @@
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+	precomposeUnicode = true
+	autocrlf = input
 
 [pager]
 	# insanely beautiful diffs ==> npm install -g diff-so-fancy
@@ -57,11 +70,15 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+ 
 
 # git mergetool
 [merge]
 	tool = opendiff
 	renameLimit = 0
+
+[merge "ours"]
+	driver = true
 
 # rewrites of repo paths
 [url "git@github.com:"]
@@ -79,6 +96,9 @@
 	
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 
 # correct typos
 [help]
@@ -109,9 +129,16 @@
     # Show blocks of moved text of at least 20 alphanumeric characters differently than adds/deletes
     # https://blog.github.com/2018-04-05-git-217-released/
     colorMoved = zebra
-[remote "origin"]
-	fetch = +refs/heads/*:refs/remotes/origin/*
+
 [stash]
 	showPatch = true
+
 [log]
 	date = relative
+
+[credential]
+	helper = osxkeychain
+
+[commit]
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = false

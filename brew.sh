@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Install command-line tools using Homebrew
-
 # Make sure we’re using the latest Homebrew
 brew update
 
@@ -16,15 +14,6 @@ brew install moreutils
 brew install findutils
 # GNU `sed`, overwriting the built-in `sed`
 brew install gnu-sed --with-default-names
-
-
-# Bash 4
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
-#brew install bash
-
-#brew install bash-completion
-
-#brew install homebrew/completions/brew-cask-completion
 
 # Install wget with IRI support
 brew install wget --with-iri
@@ -74,7 +63,10 @@ brew install pidcat   # colored logcat guy
 
 brew install ncdu # find where your diskspace went
 
-brew install zsh
+brew tap | grep -q 'getantibody/tap' || brew tap getantibody/tap
+brew install antibody
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+
