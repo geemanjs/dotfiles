@@ -1,0 +1,28 @@
+# vim as default
+export EDITOR="vim"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Prefer US English and use UTF-8
+# export LC_ALL="en_US.UTF-8"
+# export LANG="en_US"
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# here's LS_COLORS
+# github.com/trapd00r/LS_COLORS
+command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
+eval "$(gdircolors -b ~/.dircolors)"
+
+export GOPATH="$HOME/code"
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
+
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export PATH="$HOME/dotfiles/bin/:/usr/local/opt/helm@2/bin/:${HOME}/.krew/bin:$PATH"
+export NVM_DIR=~/.nvm
+
+export TOOLS_K8S_SECRETS_PATH=/Users/james.gee/code/src/github.com/eeveebank/kubernetes-secrets/local-toseal/tools
